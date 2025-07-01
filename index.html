@@ -81,41 +81,6 @@
     <section class="max-w-4xl mx-auto mt-16 px-4 scroll-mt-24" id="projects">
       <h2 class="text-2xl font-bold border-b border-gray-700 pb-2 mb-4">Projects</h2>
       <div class="space-y-6">
-        <!-- LunixHAR -->
-        <div class="bg-gray-800 p-6 rounded-lg">
-          <div class="w-40 h-40 md:w-40 md:h-40 rounded-full overflow-hidden flex items-center justify-center mx-auto">
-            <img src="img/lunixharlogo.png" alt="LunixHAR Logo" class="w-full h-full object-cover scale-100" />
-          </div>
-          <h3 class="text-xl font-bold">LuniXhar</h3>
-          <p class="text-gray-400 mt-2">
-            LunixHAR is a real-time Human Action Recognition (HAR) system that combines YOLOv8 for person detection, MobileNetV2 for feature extraction, and a Transformer-based model for action classification. 
-            It supports multi-person tracking with unique IDs using ByteTrack, and processes webcam streams via a local API. 
-            Designed for deployment on Google Cloud Run, LunixHAR enables robust, real-time activity monitoring from multiple camera inputs.
-          </p>
-          <a href="https://github.com/GherylMahardika/LuniXhar-ML-API" class="text-red-400 hover:text-red-600 mt-3 block">GitHub Repo</a>
-          <!-- Carousel -->
-          <div class="relative mt-6">
-            <div class="overflow-hidden rounded-lg">
-              <div class="flex transition-transform duration-500 w-full" id="lunixhar-carousel">
-                <div class="w-full shrink-0 h-80">
-                  <img src="img/lunixhar.jpg" class="w-full h-full object-contain" />
-                </div>
-                <div class="w-full shrink-0 h-80">
-                  <img src="img/lunixhar-1.png" class="w-full h-full object-contain" />
-                </div>
-                <div class="w-full shrink-0 h-80">
-                  <img src="img/lunixhar-2.png" class="w-full h-full object-contain" />
-                </div>
-                <div class="w-full shrink-0 h-80">
-                  <img src="img/lunixhar-3.png" class="w-full h-full object-contain" />
-                </div>
-              </div>
-            </div>
-            <button onclick="moveSlide('lunixhar-carousel', -1)" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded-full z-10">‹</button>
-            <button onclick="moveSlide('lunixhar-carousel', 1)" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded-full z-10">›</button>
-          </div>
-        </div>
-
         <!-- LeafSense -->
         <div class="bg-gray-800 p-6 rounded-lg">
           <div class="w-40 h-40 md:w-40 md:h-40 rounded-full overflow-hidden flex items-center justify-center mx-auto">
@@ -151,6 +116,41 @@
             </div>
             <button onclick="moveSlide('leafsense-carousel', -1)" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded-full z-10">‹</button>
             <button onclick="moveSlide('leafsense-carousel', 1)" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded-full z-10">›</button>
+          </div>
+        </div>
+
+        <!-- LunixHAR -->
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <div class="w-40 h-40 md:w-40 md:h-40 rounded-full overflow-hidden flex items-center justify-center mx-auto">
+            <img src="img/lunixharlogo.png" alt="LunixHAR Logo" class="w-full h-full object-cover scale-100" />
+          </div>
+          <h3 class="text-xl font-bold">LuniXhar</h3>
+          <p class="text-gray-400 mt-2">
+            LunixHAR is a real-time Human Action Recognition (HAR) system that combines YOLOv8 for person detection, MobileNetV2 for feature extraction, and a Transformer-based model for action classification. 
+            It supports multi-person tracking with unique IDs using ByteTrack, and processes webcam streams via a local API. 
+            Designed for deployment on Google Cloud Run, LunixHAR enables robust, real-time activity monitoring from multiple camera inputs.
+          </p>
+          <a href="https://github.com/GherylMahardika/LuniXhar-ML-API" class="text-red-400 hover:text-red-600 mt-3 block">GitHub Repo</a>
+          <!-- Carousel -->
+          <div class="relative mt-6">
+            <div class="overflow-hidden rounded-lg">
+              <div class="flex transition-transform duration-500 w-full" id="lunixhar-carousel">
+                <div class="w-full shrink-0 h-80">
+                  <img src="img/lunixhar.jpg" class="w-full h-full object-contain" />
+                </div>
+                <div class="w-full shrink-0 h-80">
+                  <img src="img/lunixhar-1.png" class="w-full h-full object-contain" />
+                </div>
+                <div class="w-full shrink-0 h-80">
+                  <img src="img/lunixhar-2.png" class="w-full h-full object-contain" />
+                </div>
+                <div class="w-full shrink-0 h-80">
+                  <img src="img/lunixhar-3.png" class="w-full h-full object-contain" />
+                </div>
+              </div>
+            </div>
+            <button onclick="moveSlide('lunixhar-carousel', -1)" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded-full z-10">‹</button>
+            <button onclick="moveSlide('lunixhar-carousel', 1)" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded-full z-10">›</button>
           </div>
         </div>
       </div>
