@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raden Gheryl Ivan Mahardika - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      #mobile-menu.active {
+        transform: scaleY(1);
+        opacity: 1;
+        height: auto;
+      }
+
+      #mobile-menu {
+        transform: scaleY(0);
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        transform-origin: top;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- Fixed Header -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-gray-800 shadow-md">
+      <div class="flex justify-between items-center px-6 py-4">
+        <h1 class="text-xl font-bold">Gheryl's Portfolio</h1>
+        <!-- Desktop Menu -->
+        <nav class="space-x-4 hidden md:block">
+          <a href="#about" class="hover:text-red-400">About</a>
+          <a href="#projects" class="hover:text-red-400">Projects</a>
+          <a href="#contact" class="hover:text-red-400">Contact</a>
+        </nav>
+        <!-- Hamburger Button -->
+        <button id="menu-button" class="md:hidden focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <nav id="mobile-menu" class="flex-col space-y-2 px-6 pb-4 md:hidden bg-gray-800 transform scale-y-0 opacity-0 h-0 overflow-hidden transition-all duration-300 origin-top">
+        <a href="#about" class="block hover:text-red-400">About</a>
+        <a href="#projects" class="block hover:text-red-400">Projects</a>
+        <a href="#contact" class="block hover:text-red-400">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center px-4 pt-36">
+      <div class="flex justify-center">
+        <div class="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-red-500 overflow-hidden mb-4">
+          <img src="/img/width_450.jpg" alt="Gheryl Photo" class="w-full h-full object-cover" />
+        </div>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold">Hello, I'm</h2>
+      <h2 class="text-4xl md:text-5xl font-bold pt-1">Raden Gheryl Ivan Mahardika</h2>
+      <p class="text-red-400 mt-2 text-xl md:text-2xl pt-1">AI & Cloud Engineer</p>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="#contact" class="bg-red-500 hover:bg-red-600 px-5 py-2 rounded">Got a project?</a>
+        <a href="CV_Raden_Gheryl_Ivan_Mahardika.pdf" class="border border-red-500 px-5 py-2 rounded hover:bg-red-500">My resume</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="max-w-4xl mx-auto mt-16 px-4 scroll-mt-24" id="about">
+      <h2 class="text-2xl font-bold border-b border-gray-700 pb-2 mb-4">About Me</h2>
+      <p class="text-gray-300">
+        A final-year Informatics Engineering student at Politeknik Negeri Jakarta with strong interests in Artificial Intelligence, Cloud Computing, and Back-End Development. 
+        I am highly interested in pursuing a career as an AI Engineer, Back-End Developer, or Cloud Computing Engineer.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="max-w-4xl mx-auto mt-16 px-4 scroll-mt-24" id="projects">
+      <h2 class="text-2xl font-bold border-b border-gray-700 pb-2 mb-4">Projects</h2>
+      <div class="space-y-6">
+        <!-- LunixHAR -->
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <div class="w-40 h-40 md:w-40 md:h-40 rounded-full overflow-hidden flex items-center justify-center mx-auto">
+            <img src="/img/lunixharlogo.png" alt="LunixHAR Logo" class="w-full h-full object-cover scale-100" />
+          </div>
+          <h3 class="text-xl font-bold">LuniXhar</h3>
+          <p class="text-gray-400 mt-2">
+            LunixHAR is a real-time Human Action Recognition (HAR) system that combines YOLOv8 for person detection, MobileNetV2 for feature extraction, and a Transformer-based model for action classification. 
+            It supports multi-person tracking with unique IDs using ByteTrack, and processes webcam streams via a local API. 
+            Designed for deployment on Google Cloud Run, LunixHAR enables robust, real-time activity monitoring from multiple camera inputs.
+          </p>
+          <a href="https://github.com/GherylMahardika/LuniXhar-ML-API" class="text-red-400 hover:text-red-600 mt-3 block">GitHub Repo</a>
+          <!-- Carousel -->
+          <div class="relative mt-6">
+            <div class="overflow-hidden rounded-lg">
+              <div class="flex transition-transform duration-500 w-full" id="lunixhar-carousel">
+                <div class="w-full shrink-0 h-80">
+                  <img src="/img/lunixhar.jpg" class="w-full h-full object-contain" />
+                </div>
+                <div class="w-full shrink-0 h-80">
+                  <img src="/img/lunixhar.jpg" class="w-full h-full object-contain" />
+                </div>
+              </div>
+            </div>
+            <button onclick="moveSlide('lunixhar-carousel', -1)" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded-full z-10">‹</button>
+            <button onclick="moveSlide('lunixhar-carousel', 1)" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded-full z-10">›</button>
+          </div>
+        </div>
+
+        <!-- LeafSense -->
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <div class="w-40 h-40 md:w-40 md:h-40 rounded-full overflow-hidden flex items-center justify-center mx-auto">
+            <img src="/img/leafsense-logo.png" alt="LeafSense Logo" class="w-full h-full object-cover scale-110" />
+          </div>
+          <h3 class="text-xl font-bold">LeafSense</h3>
+          <p class="text-gray-400 mt-2">
+            LeafSense is an intelligent plant disease detection system designed for crops like strawberry, coffee, and tea. 
+            It uses computer vision to identify plant diseases from images in real time, combined with an educational platform offering CRUD access to plant care articles. 
+            The system is powered by Firebase and deployed on Google Cloud Run, with integrations to Cloud SQL and Cloud Storage for efficient backend operations.
+          </p>
+          <a href="https://github.com/Leaf-Sense" class="text-red-400 hover:text-red-600 mt-3 block">GitHub Repo</a>
+          <!-- Carousel -->
+          <div class="relative mt-6">
+            <div class="overflow-hidden rounded-lg">
+              <div class="flex transition-transform duration-500 w-full" id="leafsense-carousel">
+                <div class="w-full shrink-0 h-80">
+                  <img src="/img/leafsense-0.jpg" class="w-full h-full object-contain" />
+                </div>
+                <div class="w-full shrink-0 h-80">
+                  <img src="/img/leafsense-1.jpg" class="w-full h-full object-contain" />
+                </div>
+                <div class="w-full shrink-0 h-80">
+                  <img src="/img/leafsense-2.jpg" class="w-full h-full object-contain" />
+                </div>
+                <div class="w-full shrink-0 h-80">
+                  <img src="/img/leafsense-3.jpg" class="w-full h-full object-contain" />
+                </div>
+                <div class="w-full shrink-0 h-80">
+                  <img src="/img/leafsense-4.jpg" class="w-full h-full object-contain" />
+                </div>
+              </div>
+            </div>
+            <button onclick="moveSlide('leafsense-carousel', -1)" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded-full z-10">‹</button>
+            <button onclick="moveSlide('leafsense-carousel', 1)" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded-full z-10">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="max-w-4xl mx-auto mt-16 px-4 mb-16 scroll-mt-24" id="contact">
+      <h2 class="text-2xl font-bold border-b border-gray-700 pb-2 mb-4">Contact</h2>
+      <div class="flex justify-center gap-6 mt-4">
+        <a href="mailto:gherylmahardika15@gmail.com" target="_blank" aria-label="Email">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/gmail-new.png" class="w-8 h-8 hover:scale-110 transition-transform" alt="Gmail Icon" />
+        </a>
+        <a href="https://github.com/GherylMahardika" target="_blank" aria-label="GitHub">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" class="w-8 h-8 hover:scale-110 transition-transform" alt="GitHub Icon" />
+        </a>
+        <a href="https://linkedin.com/in/gherylmahardika" target="_blank" aria-label="LinkedIn">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" class="w-8 h-8 hover:scale-110 transition-transform" alt="LinkedIn Icon" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-gray-800 text-gray-400 text-sm">
+      &copy; 2025 Raden Gheryl Ivan Mahardika. All rights reserved.
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('active');
+        });
+
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', (e) => {
+            // Let the scroll happen first, then close the menu
+            setTimeout(() => {
+              mobileMenu.classList.remove('active');
+            }, 500); // 300ms = enough for scroll animation to kick in
+          });
+        });
+      });
+
+
+      // Carousel logic
+      const slidePositions = {};
+      function moveSlide(id, direction) {
+        const carousel = document.getElementById(id);
+        const slides = carousel.children;
+        const totalSlides = slides.length;
+        const width = slides[0].offsetWidth;
+
+        if (!slidePositions[id]) slidePositions[id] = 0;
+
+        slidePositions[id] += direction;
+        if (slidePositions[id] < 0) slidePositions[id] = totalSlides - 1;
+        if (slidePositions[id] >= totalSlides) slidePositions[id] = 0;
+
+        carousel.style.transform = `translateX(-${slidePositions[id] * width}px)`;
+      }
+    </script>
+  </body>
+</html>
